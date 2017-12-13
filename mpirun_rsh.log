@@ -1,0 +1,80 @@
+[frontend:03154] [[INVALID],INVALID] plm:rsh_lookup on agent ssh : rsh path NULL
+[frontend:03154] plm:base:set_hnp_name: initial bias 3154 nodename hash 1390052121
+[frontend:03154] plm:base:set_hnp_name: final jobfam 56721
+[frontend:03154] [[56721,0],0]: Final routed priorities
+[frontend:03154]   Component: radix Priority: 70
+[frontend:03154]   Component: binomial Priority: 30
+[frontend:03154]   Component: debruijn Priority: 10
+[frontend:03154]   Component: direct Priority: 0
+[frontend:03154] [[56721,0],0] plm:rsh_setup on agent ssh : rsh path NULL
+[frontend:03154] [[56721,0],0] plm:base:receive start comm
+[frontend:03154] [[56721,0],0] plm:base:setup_job
+[frontend:03154] [[56721,0],0] plm:base:setup_vm
+[frontend:03154] [[56721,0],0] plm:base:setup_vm creating map
+[frontend:03154] [[56721,0],0] plm:base:setup_vm add new daemon [[56721,0],1]
+[frontend:03154] [[56721,0],0] plm:base:setup_vm assigning new daemon [[56721,0],1] to node node-002
+[frontend:03154] [[56721,0],0] plm:base:setup_vm add new daemon [[56721,0],2]
+[frontend:03154] [[56721,0],0] plm:base:setup_vm assigning new daemon [[56721,0],2] to node node-003
+[frontend:03154] [[56721,0],0]: parent -1 num_children 1
+[frontend:03154] [[56721,0],0]:    child 1
+[frontend:03154] [[56721,0],0]:            relation 2
+[frontend:03154] [[56721,0],0] routed:binomial rank 0 parent 0 me 0 num_procs 3
+[frontend:03154] [[56721,0],0] routed:binomial 0 found child 1
+[frontend:03154] [[56721,0],0] routed:binomial rank 0 parent 0 me 1 num_procs 3
+[frontend:03154] [[56721,0],0] routed:binomial find children of rank 0
+[frontend:03154] [[56721,0],0] routed:binomial find children checking peer 1
+[frontend:03154] [[56721,0],0] routed:binomial find children computing tree
+[frontend:03154] [[56721,0],0] routed:binomial rank 1 parent 0 me 1 num_procs 3
+[frontend:03154] [[56721,0],0] routed:binomial find children returning found value 0
+[frontend:03154] [[56721,0],0] routed:binomial 0 found child 2
+[frontend:03154] [[56721,0],0] routed:binomial rank 0 parent 0 me 2 num_procs 3
+[frontend:03154] [[56721,0],0] routed:binomial find children of rank 0
+[frontend:03154] [[56721,0],0] routed:binomial find children checking peer 1
+[frontend:03154] [[56721,0],0] routed:binomial find children computing tree
+[frontend:03154] [[56721,0],0] routed:binomial rank 1 parent 0 me 2 num_procs 3
+[frontend:03154] [[56721,0],0] routed:binomial find children of rank 1
+[frontend:03154] [[56721,0],0] routed:binomial find children checking peer 3
+[frontend:03154] [[56721,0],0] routed:binomial find children checking peer 2
+[frontend:03154] [[56721,0],0] routed:binomial find children computing tree
+[frontend:03154] [[56721,0],0] routed:binomial rank 2 parent 0 me 2 num_procs 3
+[frontend:03154] [[56721,0],0] routed:binomial find children returning found value 0
+[frontend:03154] [[56721,0],0]: parent 0 num_children 2
+[frontend:03154] [[56721,0],0]:    child 1
+[frontend:03154] [[56721,0],0]:    child 2
+[frontend:03154] [[56721,0],0] routed:direct: update routing plan
+[frontend:03154] [[56721,0],0] plm:rsh: launching vm
+[frontend:03154] [[56721,0],0] plm:rsh: local shell: 0 (bash)
+[frontend:03154] [[56721,0],0] plm:rsh: assuming same remote shell as local shell
+[frontend:03154] [[56721,0],0] plm:rsh: remote shell: 0 (bash)
+[frontend:03154] [[56721,0],0] plm:rsh: final template argv:
+        /bin/ssh <template>     PATH=<path to workdir>/install/ompi_v3.0.x/bin:$PATH ; export PATH ; LD_LIBRARY_PATH=<path to workdir>/install/ompi_v3.0.x/lib:$LD_LIBRARY_PATH ; export LD_LIBRARY_PATH ; DYLD_LIBRARY_PATH=<path to workdir>/install/ompi_v3.0.x/lib:$DYLD_LIBRARY_PATH ; export DYLD_LIBRARY_PATH ;   <path to workdir>/install/ompi_v3.0.x/bin/orted -mca ess "env" -mca ess_base_jobid "3717267456" -mca ess_base_vpid "<template>" -mca ess_base_num_procs "3" -mca orte_hnp_uri "3717267456.0;tcp://10.131.5.129,10.131.200.231,172.17.10.240:42470" -mca oob "tcp" --mca routed_radix "1" -mca plm_base_verbose "5" -mca routed_base_verbose "5" -mca plm "rsh" -mca rmaps_ppr_n_pernode "1" -mca pmix "^s1,s2,cray,isolated"
+[frontend:03154] [[56721,0],0] plm:rsh:launch daemon 0 not a child of mine
+[frontend:03154] [[56721,0],0] plm:rsh: adding node node-002 to launch list
+[frontend:03154] [[56721,0],0] plm:rsh:launch daemon 2 not a child of mine
+[frontend:03154] [[56721,0],0] plm:rsh: activating launch event
+[frontend:03154] [[56721,0],0] plm:rsh: recording launch of daemon [[56721,0],1]
+[frontend:03154] [[56721,0],0] plm:rsh: executing: (/bin/ssh) [/bin/ssh node-002     PATH=<path to workdir>/install/ompi_v3.0.x/bin:$PATH ; export PATH ; LD_LIBRARY_PATH=<path to workdir>/install/ompi_v3.0.x/lib:$LD_LIBRARY_PATH ; export LD_LIBRARY_PATH ; DYLD_LIBRARY_PATH=<path to workdir>/install/ompi_v3.0.x/lib:$DYLD_LIBRARY_PATH ; export DYLD_LIBRARY_PATH ;   <path to workdir>/install/ompi_v3.0.x/bin/orted -mca ess "env" -mca ess_base_jobid "3717267456" -mca ess_base_vpid 1 -mca ess_base_num_procs "3" -mca orte_hnp_uri "3717267456.0;tcp://10.131.5.129,10.131.200.231,172.17.10.240:42470" -mca oob "tcp" --mca routed_radix "1" -mca plm_base_verbose "5" -mca routed_base_verbose "5" -mca plm "rsh" -mca rmaps_ppr_n_pernode "1" -mca pmix "^s1,s2,cray,isolated"]
+[node-002:15066] [[56721,0],1] plm:rsh_lookup on agent ssh : rsh path NULL
+[node-002:15066] [[56721,0],1]: Final routed priorities
+[node-002:15066]        Component: radix Priority: 70
+[node-002:15066]        Component: binomial Priority: 30
+[node-002:15066]        Component: debruijn Priority: 10
+[node-002:15066]        Component: direct Priority: 0
+[node-002:15066] [[56721,0],1] plm:rsh_setup on agent ssh : rsh path NULL
+[node-002:15066] [[56721,0],1] plm:base:receive start comm
+[frontend:03154] [[56721,0],0] routed_radix_update: [[56721,0],1] --> [[56721,0],1]
+[frontend:03154] [[56721,0],0] routed_binomial_update: [[56721,0],1] --> [[56721,0],1]
+[frontend:03154] [[56721,0],0] routed_debruijn_update: [[56721,0],1] --> [[56721,0],1]
+[frontend:03154] [[56721,0],0] routed_direct_update: [[56721,0],1] --> [[56721,0],1]
+[node-002:15066] [[56721,0],1] routed_radix_update: [[56721,0],0] --> [[56721,0],0]
+[node-002:15066] [[56721,0],1] routed_binomial_update: [[56721,0],0] --> [[56721,0],0]
+[node-002:15066] [[56721,0],1] routed_debruijn_update: [[56721,0],0] --> [[56721,0],0]
+[node-002:15066] [[56721,0],1] routed_direct_update: [[56721,0],0] --> [[56721,0],0]
+[frontend:03154] [[56721,0],0] plm:base:orted_report_launch from daemon [[56721,0],1]
+[frontend:03154] [[56721,0],0] plm:base:orted_report_launch from daemon [[56721,0],1] on node node-002
+[frontend:03154] [[56721,0],0] RECEIVED TOPOLOGY SIG 2N:2S:2L3:32L2:32L1:32C:32H:x86_64:le FROM NODE node-002
+[frontend:03154] [[56721,0],0] NEW TOPOLOGY - ADDING
+[frontend:03154] [[56721,0],0] plm:base:orted_report_launch completed for daemon [[56721,0],1] at contact 3717267456.1;tcp://10.131.202.2,172.17.41.2,172.17.11.2,172.17.42.2,172.17.43.2,172.17.51.2:54339
+[frontend:03154] [[56721,0],0] plm:base:orted_report_launch recvd 2 of 3 reported daemons
+[node-002:15066] [[56721,0],1] plm:rsh: remote spawn called
+[node-002:15066] [[56721,0],1] plm:rsh: remote spawn - have no children!
